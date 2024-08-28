@@ -4,18 +4,17 @@
 #include <vector>
 
 class Room;
-
+class Dungeon;
 class DungeonGenerator {
 public:
-    std::vector<std::vector<bool>> generateDungeon(int size_x, int size_y);
+    explicit DungeonGenerator(Dungeon* dungeon);
 
 private:
-    void generateRoom();
+    void generateRooms(int map_x, int map_y);
     void orientOnMap();
     void setMainRoom();
     void buildMST();
-    std::list<Room> _rooms;
-    std::vector<std::vector<bool>> map;
+    Dungeon* _dungeon;
 
 };
 

@@ -7,8 +7,9 @@ namespace RG{
     inline static std::random_device rd;
     inline static std::mt19937 gen(rd());
 
-    inline int randint(const int min, const int max) {
-        std::uniform_int_distribution<> dis(min,max);
+    template<typename T>
+    inline T randInteger(const T min, const T max) {
+        std::uniform_int_distribution<decltype(min)> dis(min,max);
         return dis(gen);
     }
 }

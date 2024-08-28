@@ -27,6 +27,8 @@ add_library(DungeonGenerator SHARED
         src/generator/Room.cpp
         src/generator/Room.h
         src/generator/RandomGenerator.h
+        src/generator/Dungeon.cpp
+        src/generator/Dungeon.h
 )
 
 add_executable(DungeonGeneratorDemo DungeonGeneratorDemo.cpp)
